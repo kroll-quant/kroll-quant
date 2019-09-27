@@ -1,5 +1,6 @@
 'use strict';
 const confidence = require('confidence');
+const path = require('path');
 
 const dotenv = require('dotenv');
 dotenv.config();
@@ -32,7 +33,16 @@ const config = {
                 production: process.env.TRADE_CTP_PASSWORD_PRODUCTION
             }
         }
-    }
+    },
+    strategies: [
+        {
+            name: 'demoStrategy',
+            path: path.join(__dirname, './userStrategy/demoStrategy'),
+            contracts: ['c2001', 'a2001'],
+            enable: true,
+        },
+    ]
+
 };
 
 const store = new confidence.Store(config);
