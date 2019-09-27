@@ -39,6 +39,7 @@ const config = {
             name: 'demoStrategy',
             path: path.join(__dirname, './userStrategy/demoStrategy'),
             contracts: ['c2001', 'a2001'],
+            kLineCycle: ''
             enable: true,
         },
     ]

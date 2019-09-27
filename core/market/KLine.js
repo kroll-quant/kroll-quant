@@ -1,20 +1,10 @@
-const events = require('events');
-const ctp = require('node-ctp');
-
-class KLine extends events.EventEmitter {
-    constructor(kLineCycle){//k线周期
-        super()
-        this.kLineCycle = kLineCycle;
+class KLine {
+    constructor(open,high,low,close){
+        this.open = o;
+        this.high = o;
+        this.low = o;
+        this.close = o;
     }
-
-    onTick(tick){
-        //TODO: generate kline
-        let kLine = null;
-
-        this.emit('KLINE', kLine);
-    }
-
-
 }
 
 module.exports = KLine;
